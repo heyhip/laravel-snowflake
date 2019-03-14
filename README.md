@@ -10,11 +10,21 @@ composer require youthage/snowflake
 
 ### 配置方法 ###
 
-.env 配置工作机器ID,如下
+配置工作机器ID,如下
 
 ```php
-#工作机器ID, 0-1023, 如果不配置，默认为1
-SNOWFLAKE_WORK_ID=1023
+#工作机器ID, 0-1023
+config目录下创建baseconfig.php
+
+内容为
+<?php
+
+
+return [
+
+    'SNOWFLAKE_WORK_ID' => 1
+
+];
 ```
 
 ### 使用方法 ###
