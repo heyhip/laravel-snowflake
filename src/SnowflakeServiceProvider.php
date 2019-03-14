@@ -32,7 +32,7 @@ class SnowflakeServiceProvider extends ServiceProvider
     {
         //
         $this->app->singleton('snowflake', function () {
-            $workId = env('SNOWFLAKE_WORK_ID', 1);
+            $workId = config('baseconfig.SNOWFLAKE_WORK_ID')
             return new Snowflake($workId);
         });
     }
